@@ -1,4 +1,4 @@
-export interface Type {
+export interface Brand {
     id: number;
     name: string;
 }
