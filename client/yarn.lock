@@ -2219,6 +2219,11 @@ bootstrap@^5.2.3:
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.0.tgz#0718a7cc29040ee8dbf1bd652b896f3436a87c29"
   integrity sha512-UnBV3E3v4STVNQdms6jSGO2CvOkjUMdDAVR2V5N4uCMdaIkaQjbcEAMqRimDHIs4uqBYzDAKCQwCB+97tJgHQw==
 
+bootswatch@^5.2.3:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-5.3.0.tgz#7c7dd50bbe8519b0c6dbe01f4f9c3100b60228bd"
+  integrity sha512-ga2hHognDrh5h3+CaBBug6ktx3MTlnDzH57s+Mvjt9ZcNxqwpK+m3sE3YIUSr8zf2iG05elOb1mnqqcdbce2ow==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -4437,10 +4442,17 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngx-bootstrap@^10.0.0:
+ngx-bootstrap@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-10.2.0.tgz#5ae8b0a3b3f0bec2f0229556f059be57dd602871"
   integrity sha512-bn5wdvH6QQ2JGu4TgUbozdULBFMxZNPNTgO7dRiosx9FRrFvKcgxkGSgU/xoj+4kP1vgh8zwzaiDfvH/Bfb+Aw==
+  dependencies:
+    tslib "^2.3.0"
+
+ngx-spinner@^15.0.1:
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-spinner/-/ngx-spinner-15.0.1.tgz#3256b01dd3e1906852528d8a531206c6cbb38772"
+  integrity sha512-7DjETmBpuXTwI68ad1xMKpwt4Cyz1eyu8E7AJcFiKa+8JAnbo0k1qfvWur0aemncRNxDxHoyl6jw42MsnE/B+g==
   dependencies:
     tslib "^2.3.0"
 
@@ -5289,10 +5301,10 @@ rxjs@^7.5.5:
   dependencies:
     tslib "^2.1.0"
 
-rxjs@~7.5.0:
-  version "7.5.7"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
-  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
+rxjs@~7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.6.0.tgz#361da5362b6ddaa691a2de0b4f2d32028f1eb5a2"
+  integrity sha512-DDa7d8TFNUalGC9VqXvQ1euWNN7sc63TrUCuM9J998+ViviahMIjKSOU7rfcgFOF+FCD71BhDRv4hrFz+ImDLQ==
   dependencies:
     tslib "^2.1.0"
 
@@ -5872,9 +5884,9 @@ tslib@^1.9.0:
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0, tslib@^2.3.0:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.3.tgz#24944ba2d990940e6e982c4bea147aba80209913"
-  integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.0.tgz#b295854684dbda164e181d259a22cd779dcd7bc3"
+  integrity sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==
 
 type-fest@^0.21.3:
   version "0.21.3"
@@ -6221,6 +6233,13 @@ ws@~8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
   integrity sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==
+
+xng-breadcrumb@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/xng-breadcrumb/-/xng-breadcrumb-9.0.0.tgz#a10b26782922e4b99d2533266692ce0d18943735"
+  integrity sha512-7HgXLJ4vwzQNVAgm7eAOyZhG8Yr4pGl7QsJh2CtZcuOvYMm2fr33QppDgB3lIbfQtuXaTd1cSO+DkyQVBs1jZA==
+  dependencies:
+    tslib "^2.3.0"
 
 y18n@^5.0.5:
   version "5.0.8"
