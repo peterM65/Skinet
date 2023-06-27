@@ -1,7 +1,5 @@
-﻿using Core.Entities;
+using Core.Entities;
 using Core.Specifications;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {

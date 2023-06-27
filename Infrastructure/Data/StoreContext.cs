@@ -1,6 +1,6 @@
+using System.Reflection;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Infrastructue.Data
 {
@@ -14,7 +14,6 @@ namespace Infrastructue.Data
         public DbSet<ProductBrand> ProductBrands { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
 
-        //configuring the migration
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

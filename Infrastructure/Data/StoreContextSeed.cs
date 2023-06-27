@@ -1,12 +1,11 @@
-﻿using Core.Entities;
-using Infrastructue.Data;
 using System.Text.Json;
+using Core.Entities;
+using Infrastructue.Data;
 
 namespace Infrastructure.Data
 {
     public class StoreContextSeed
     {
-        // Add Seed data
         public static async Task SeedAsync(StoreContext context)
         {
             if (!context.ProductBrands.Any())

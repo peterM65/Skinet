@@ -20,10 +20,10 @@ namespace API.Extensions
             {
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
-            services.AddSingleton<IConnectionMultiplexer>( c =>
+            services.AddSingleton<IConnectionMultiplexer>(c => 
             {
-                var option = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
-                return ConnectionMultiplexer.Connect(option);
+                var options = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
+                return ConnectionMultiplexer.Connect(options);
             });
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -46,13 +46,13 @@ namespace API.Extensions
                     return new BadRequestObjectResult(errorResponse);
                 };
             });
+
             services.AddCors(opt =>
             {
-                opt.AddPolicy("CorePolicy", policy =>
+                opt.AddPolicy("CorsPolicy", policy => 
                 {
-                    policy.AllowAnyHeader().AllowAnyHeader().WithOrigins("https://localhost:4200");
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
                 });
-
             });
 
             return services;
