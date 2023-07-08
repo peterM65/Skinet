@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AccountService } from '../account.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent {
   })
   returnUrl: string;
 
-  constructor(private accountService: AccountService, private router: Router,
+  constructor(private accountService: AccountService, private router: Router, 
     private activatedRoute: ActivatedRoute) {
       this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/shop'
   }
@@ -25,5 +25,4 @@ export class LoginComponent {
       next: () => this.router.navigateByUrl(this.returnUrl)
     })
   }
-
 }

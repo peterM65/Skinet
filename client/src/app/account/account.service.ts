@@ -1,9 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from './../shared/models/user';
 import { Injectable } from '@angular/core';
-import { ReplaySubject, map, of } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { map, of, ReplaySubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Address, User } from '../shared/models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class AccountService {
   private currentUserSource = new ReplaySubject<User | null>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   loadCurrentUser(token: string | null) {
     if (token == null) {
@@ -37,7 +37,7 @@ export class AccountService {
     )
   }
 
-  login(values: any){
+  login(values: any) {
     return this.http.post<User>(this.baseUrl + 'account/login', values).pipe(
       map(user => {
         localStorage.setItem('token', user.token);
@@ -46,7 +46,7 @@ export class AccountService {
     )
   }
 
-  register(values: any){
+  register(values: any) {
     return this.http.post<User>(this.baseUrl + 'account/register', values).pipe(
       map(user => {
         localStorage.setItem('token', user.token);
@@ -55,7 +55,7 @@ export class AccountService {
     )
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem('token');
     this.currentUserSource.next(null);
     this.router.navigateByUrl('/');
@@ -65,4 +65,11 @@ export class AccountService {
     return this.http.get<boolean>(this.baseUrl + 'account/emailExists?email=' + email);
   }
 
+  getUserAddress() {
+    return this.http.get<Address>(this.baseUrl + 'account/address');
+  }
+
+  updateUserAddress(address: Address) {
+    return this.http.put(this.baseUrl + 'account/address', address);
+  }
 }
