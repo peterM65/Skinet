@@ -1,4 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Models;
 
 namespace API.Extensions
 {
@@ -8,7 +8,7 @@ namespace API.Extensions
         {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c => 
             {
                 var securitySchema = new OpenApiSecurityScheme
                 {
@@ -34,7 +34,7 @@ namespace API.Extensions
                 };
 
                 c.AddSecurityRequirement(securityRequirement);
-
+                
             });
             return services;
         }

@@ -10,11 +10,10 @@ namespace API.Controllers
     {
         private readonly IBasketRepository _basketRepository;
         private readonly IMapper _mapper;
-
         public BasketController(IBasketRepository basketRepository, IMapper mapper)
         {
-            _basketRepository = basketRepository;
             _mapper = mapper;
+            _basketRepository = basketRepository;
         }
 
         [HttpGet]
@@ -28,7 +27,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<CustomerBasket>> UpdateBasket(CustomerBasketDto basket)
         {
-            var customerBasket =  _mapper.Map<CustomerBasketDto,CustomerBasket>(basket);
+            var customerBasket = _mapper.Map<CustomerBasket>(basket);
 
             var updatedBasket = await _basketRepository.UpdateBasketAsync(customerBasket);
 

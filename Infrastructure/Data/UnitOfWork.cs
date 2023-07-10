@@ -1,7 +1,7 @@
-﻿using Core.Entities;
+using System.Collections;
+using Core.Entities;
 using Core.Interfaces;
 using Infrastructue.Data;
-using System.Collections;
 
 namespace Infrastructure.Data
 {
@@ -27,7 +27,7 @@ namespace Infrastructure.Data
         public IGenericRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
             if (_repositories == null) _repositories = new Hashtable();
-            
+
             var type = typeof(TEntity).Name;
 
             if (!_repositories.ContainsKey(type))
@@ -38,7 +38,7 @@ namespace Infrastructure.Data
                 _repositories.Add(type, repositoryInstance);
             }
 
-            return (IGenericRepository<TEntity>)_repositories[type];
+            return (IGenericRepository<TEntity>) _repositories[type];
         }
     }
 }

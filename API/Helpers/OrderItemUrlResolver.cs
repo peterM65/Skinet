@@ -1,4 +1,4 @@
-﻿using API.Dtos;
+using API.Dtos;
 using AutoMapper;
 using Core.Entities.OrderAggregate;
 
@@ -22,4 +22,5 @@ namespace API.Helpers
             return null;
         }
     }
+
 }
